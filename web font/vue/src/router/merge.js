@@ -22,10 +22,10 @@ for (let dir of dirArr) {
   }
 }
 
-let content = fs.readFileSync(path.resolve(__dirname, 'routerTemplate.js'));
+let content = fs.readFileSync(path.resolve(__dirname, 'routerConfig.js'));
 content = content.toString();
-content = content.replace(`import imports from 'imports';`, imports);
-content = content.replace('\'{{routes}}\'', routes);
+content = content.replace(`'{{import imports from imports;}}'`, imports);
+content = content.replace(`'{{routes}}'`, routes);
 
 console.log('正在写入文件');
 let outStream = fs.createWriteStream(path.resolve(__dirname, 'index.js'));

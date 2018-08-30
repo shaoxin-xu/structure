@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import imports from 'imports';
+'{{import imports from imports;}}'
 
 Vue.use(Router);
 let router = new Router({
